@@ -24,21 +24,18 @@ function init() {
         svgText = svgShape.text;
         svgTextColor = svgShape.textcolor;
         svgShapeString = `<circle cx="${svgShape.cx}" cy="${svgShape.cy}" r="${svgShape.r}" fill="${svgShape.shapecolor}"/>`;
-        console.log(svgShapeString)
         return {svgShapeString, svgText, svgTextColor};
 
       } else if (userShape[0] === 'Triangle') {
-        svgText = svgShape.text;
-        svgShape = new Triangle(userText, userTextColor, userShapeColor, userShape[0], [200, 10, 250, 190, 160, 210]);
+        svgShape = new Triangle(userText, userTextColor, userShapeColor, userShape[0], [150, 10, 244, 190 ,56, 190]);
         svgText = svgShape.text;
         svgTextColor = svgShape.textcolor;
         svgShapeString = `<polygon points="${svgShape.points.join(' ')}" fill="${svgShape.shapecolor}"/>`;
         return {svgShapeString, svgText, svgTextColor};
 
       } else if (userShape[0] === 'Square') {
-        svgText = svgShape.text;
-        svgTextColor = svgShape.textcolor;
         svgShape = new Square(userText, userTextColor, userShapeColor, userShape[0], 60, 10, 200, 200);
+        svgTextColor = svgShape.textcolor;
         svgText = svgShape.text;
         svgShapeString = `<rect x="${svgShape.x}" y="${svgShape.y}" width="${svgShape.width}" height="${svgShape.height}" fill="${svgShape.shapecolor}"/>`;
         return {svgShapeString, svgText, svgTextColor};
