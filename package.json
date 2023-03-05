@@ -12,6 +12,7 @@
     "jest": "^24.9.0"
   },
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.4",
+    "tinycolor2": "^1.6.0"
   }
 }
